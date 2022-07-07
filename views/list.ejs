@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Day teller</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="perso">
+      <h1 class="co">Lets make your day productive with this To Do list</h1>
+    </div>
+    <div class="box" id ="heading">
+        <h1 > <%= acday %></h1>
+    </div>
+
+<div class="box">
+<form class="" action="/delete" method="post">
+  <%newListItems.forEach((item)=>{%>
+    <div class="item">
+      <input type="checkbox" name="checkbox" onChange="this.form.submit()" value="<%= item._id%>">
+      <p><%= item.name %></p>
+    </div>
+  <%})%>
+</form>
+
+
+
+  <form action="/" method="post">
+    <input type="text" name="newitem" placeholder="New Task" autocomplete="off">
+    <button type="submit" name="button">+</button>
+  </form>
+</div>
+
+
+
+  </body>
+</html>
