@@ -5,7 +5,7 @@ const date = require(__dirname + "/date.js");
 const mongoose = require("mongoose");
 
 const app = express();
-mongoose.connect(
+mongoose.connect(process.env.MONGODB_URI||
   "mongodb+srv://codex:5A46yEm8Q7rMfaTa@cluster0.txepu.mongodb.net/?retryWrites=true&w=majority",
   { useNewUrlParser: true }
 );
